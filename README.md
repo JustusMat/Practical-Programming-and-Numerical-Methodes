@@ -1,2 +1,2 @@
 # Practical-Programming-and-Numerical-Methodes
-Exercises and stuff in Practical 
+Repository of Justus for the course "Practical Programming and Numerical Methods"
