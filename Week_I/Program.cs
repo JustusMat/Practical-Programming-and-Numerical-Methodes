@@ -1,5 +1,5 @@
 ﻿class hello{
-    static void Main(){
+    static void Main(string[] args){
         System.Console.Write("hello\n");
     }
 }
