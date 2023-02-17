@@ -1,0 +1,33 @@
+The vector ABC is given by: 1 2 3
+The vector CBA is given by: 3 2 1
+-----------------------------------------
+Multiplication example with n = 10
+ABC*n = 10 20 30
+CBA*n = 30 20 10
+-----------------------------------------
+Second option for multiplication with n = 10
+ABC*n*n = 100 200 300
+CBA*n*n = 300 200 100
+-----------------------------------------
+Addition of ABC*n*n and CBA*n*n
+400 400 400
+-----------------------------------------
+Subtraction of CBA*n*n from ABC*n*n
+-200 0 200
+-----------------------------------------
+Inner product between ABC and CBA
+10
+-----------------------------------------
+Norm of ABC = 3.74165738677394
+Norm of CBA = 3.74165738677394
+-----------------------------------------
+Wedge product between ABC and CBA
+-4 8 -4
+-----------------------------------------
+The variation is 8.98045707446544E-10
+ABC is equal to ABC + ABC*variation
+CBA is equal to CBA + CBA*variation
+ABC is not equal to CBA
+CBA is not equal to ABC
+-----------------------------------------
+Done

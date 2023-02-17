@@ -1,8 +1,8 @@
 My max int = 2147483647
 ----------------------------------------------
-Elapsed time (while loop) = 587 ms.
+Elapsed time (while loop) = 624 ms.
 ----------------------------------------------
-Elapsed time (for loop) = 637 ms.
+Elapsed time (for loop) = 662 ms.
 ----------------------------------------------
-Elapsed time (do while loop) = 573 ms.
+Elapsed time (do while loop) = 595 ms.
 ----------------------------------------------
