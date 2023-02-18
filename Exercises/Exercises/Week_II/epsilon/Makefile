@@ -1,8 +1,19 @@
 Out.txt : main.exe
 	mono main.exe > Out.txt
+
+main.exe:main.cs epsfunc.dll
+	mcs main.cs -target:exe -out:main.exe -reference:epsfunc.dll 
+
+	#clear my console
+	clear
 	
-main.exe : main.cs
-	mcs main.cs
-	
+epsfunc.dll: epsfunc.cs
+	mcs $^ -target:library -out:epsfunc.dll 
+
+.PHONEY:clean
 clean:
-	rm -f Out.txt main.exe
+	$(RM) *.txt *.dll
+	
+
+test:
+	echo test

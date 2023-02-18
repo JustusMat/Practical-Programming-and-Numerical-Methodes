@@ -1,8 +1,19 @@
-My max int = 2147483647
-----------------------------------------------
-Elapsed time (while loop) = 624 ms.
-----------------------------------------------
-Elapsed time (for loop) = 662 ms.
-----------------------------------------------
-Elapsed time (do while loop) = 595 ms.
-----------------------------------------------
+my max int=2147483647
+my systems min integer value -2147483648
+--------------------------------------------------
+While and do while loop results for machine epsilon
+double machine epsilon: 2.22044604925031E-16
+float machine epsilon 1.192093E-07
+Power representation of machine epsilon
+double machine epsilon: 2.22044604925031E-16
+float machine epsilon: 1.19209289550781E-07
+--------------------------------------------------
+sumA-1 = 0.000000e+000 should be 1.11022302462516E-10
+sumB-1 = 1.110223e-010 should be 1.11022302462516E-10
+--------------------------------------------------
+d1=8.000000000000000e-001
+d2=7.999999999999999e-001
+difference : 1.110223024625157e-016
+d1==d2 ? => False
+approx(d1==d2?) ? => True
+--------------------------------------------------

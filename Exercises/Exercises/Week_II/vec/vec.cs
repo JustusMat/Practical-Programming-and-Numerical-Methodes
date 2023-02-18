@@ -1,5 +1,3 @@
-using System.ComponentModel;
-
 public class vec
 {
     //Fields
