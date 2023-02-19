@@ -1,4 +1,4 @@
-class Program
+class ComplexExercise
 {
     static void Main(string[] args)
     {
