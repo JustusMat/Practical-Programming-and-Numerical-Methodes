@@ -1,0 +1,106 @@
+--------------------------------------------------
+--------------------------------------------------
+Doing own multithreading for loop
+Input nterms=500000000 nthreads=1
+i=0 x.a=1 x.b=500000000
+thread number 1 a=1 b=500000000
+thread number 1 sum=20.6073343202888
+nterm500000000 sum=20.6073343202888
+Done self made multiprocessing...
+--------------------------------------------------
+real 0.84
+user 0.84
+sys 0.00
+--------------------------------------------------
+Doing inbuild multithreading for loop
+Input nterms=500000000 nthreads=1
+nterm500000000 sum=20.6073343222888
+Done inbuild multiprocessing...
+--------------------------------------------------
+real 2.50
+user 2.49
+sys 0.00
+--------------------------------------------------
+--------------------------------------------------
+Doing own multithreading for loop
+Input nterms=500000000 nthreads=2
+i=0 x.a=1 x.b=250000000
+i=1 x.a=250000001 x.b=500000000
+thread number 2 a=250000001 b=500000000
+thread number 1 a=1 b=250000000
+thread number 2 sum=0.693147177559917
+thread number 1 sum=19.9141871387291
+nterm500000000 sum=20.607334316289
+Done self made multiprocessing...
+--------------------------------------------------
+real 0.43
+user 0.85
+sys 0.00
+--------------------------------------------------
+Doing inbuild multithreading for loop
+Input nterms=500000000 nthreads=2
+nterm500000000 sum=17.1340637234562
+Done inbuild multiprocessing...
+--------------------------------------------------
+real 3.13
+user 6.25
+sys 0.00
+--------------------------------------------------
+--------------------------------------------------
+Doing own multithreading for loop
+Input nterms=500000000 nthreads=3
+i=0 x.a=1 x.b=166666666
+i=1 x.a=166666667 x.b=333333333
+i=2 x.a=333333334 x.b=500000000
+thread number 3 a=333333334 b=500000000
+thread number 1 a=1 b=166666666
+thread number 2 a=166666667 b=333333333
+thread number 3 sum=0.40546510660821
+thread number 2 sum=0.693147179060259
+thread number 1 sum=19.5087220256203
+nterm500000000 sum=20.6073343112888
+Done self made multiprocessing...
+--------------------------------------------------
+real 0.29
+user 0.86
+sys 0.00
+--------------------------------------------------
+Doing inbuild multithreading for loop
+Input nterms=500000000 nthreads=3
+nterm500000000 sum=16.5406958281384
+Done inbuild multiprocessing...
+--------------------------------------------------
+real 3.05
+user 9.12
+sys 0.00
+--------------------------------------------------
+--------------------------------------------------
+Doing own multithreading for loop
+Input nterms=500000000 nthreads=4
+i=0 x.a=1 x.b=125000000
+i=1 x.a=125000001 x.b=250000000
+i=2 x.a=250000001 x.b=375000000
+i=3 x.a=375000001 x.b=500000000
+thread number 4 a=375000001 b=500000000
+thread number 3 a=250000001 b=375000000
+thread number 1 a=1 b=125000000
+thread number 2 a=125000001 b=250000000
+thread number 3 sum=0.405465104774859
+thread number 1 sum=19.2210399561691
+thread number 2 sum=0.693147174559909
+thread number 4 sum=0.287682070118434
+nterm500000000 sum=20.6073343056223
+Done self made multiprocessing...
+--------------------------------------------------
+real 0.22
+user 0.86
+sys 0.00
+--------------------------------------------------
+Doing inbuild multithreading for loop
+Input nterms=500000000 nthreads=4
+nterm500000000 sum=14.0801514377884
+Done inbuild multiprocessing...
+--------------------------------------------------
+real 3.16
+user 12.60
+sys 0.00
