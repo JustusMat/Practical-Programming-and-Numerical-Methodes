@@ -20,7 +20,6 @@ class ComplexExercise
         complex sinhImaginaryUnit = cmath.sinh(imaginaryUnit);
         complex coshImaginaryUnit = cmath.cosh(imaginaryUnit);
         
-        
         //Printing
         PrintMyNumber("Sqrt(-1)",sqrtNegativeOne);
         PrintMyNumber("Sqrt(i)",sqrtImaginaryUnit);

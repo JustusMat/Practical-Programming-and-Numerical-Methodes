@@ -4,7 +4,6 @@ using static System.Math;
 public static partial class cmath{ /* complex math */
 
 public static readonly complex I = new complex(0,1);
-
 public static double   arg(complex z) => Math.Atan2(z.Im,z.Re);
 public static complex  exp(complex z)
 	=> Math.Exp(z.Re)*(Math.Cos(z.Im)+I*Math.Sin(z.Im));
