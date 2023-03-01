@@ -5,7 +5,28 @@ To clone the repository go into your favourite directory and do
 ```
 git clone https://github.com/JustusMat/Practical-Programming-and-Numerical-Methods.git
 ```
-### Upload 
+
+## Status of exercises
+#### Week I
+![Progress](https://progress-bar.dev/100/?title=/hello) <br />
+#### Week II
+![Progress](https://progress-bar.dev/100/?title=/epsilon) <br />
+![Progress](https://progress-bar.dev/100/?title=/math) <br />
+![Progress](https://progress-bar.dev/100/?title=/vec) <br />
+#### Week III
+![Progress](https://progress-bar.dev/100/?title=/complex) <br />
+![Progress](https://progress-bar.dev/100/?title=/generic_list) <br />
+![Progress](https://progress-bar.dev/100/?title=/inputoutput) <br />
+#### Week IV
+![Progress](https://progress-bar.dev/50/?title=/multiprocessing) <br />
+![Progress](https://progress-bar.dev/50/?title=/ScientificPlotting) <br />
+
+## Status of homeworks
+#### Week V
+![Progress](https://progress-bar.dev/0/?title=/linear_equations) <br />
+
+
+### Upload
 To upload the changes with a specified message, do
 ```
 git add --all
