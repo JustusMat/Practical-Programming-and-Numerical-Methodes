@@ -1,5 +1,5 @@
 set terminal svg background "white"
-set output "output/LnGamma.svg"
+set output "LnGamma.svg"
 set xlabel "x"
 set ylabel "y" 
 set xzeroaxis
@@ -9,4 +9,4 @@ set tics in
 set title "Natural logarithm of gamma function"
 
 plot [0:5] \
-    "data/lngamma.data" with lines title "theory" lt rgb "black, \
+    "../data/lngamma.data" with lines title "theory" lt rgb "black, \

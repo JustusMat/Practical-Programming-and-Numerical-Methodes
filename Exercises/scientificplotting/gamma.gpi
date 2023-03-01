@@ -1,5 +1,5 @@
 set terminal svg background "white"
-set output "output/Gamma.svg"
+set output "Gamma.svg"
 set xlabel "x"
 set ylabel "y" 
 set xzeroaxis
@@ -9,4 +9,4 @@ set tics in
 set title "Gamma function"
 
 plot [-5:5] [-5:5] \
-    "data/gamma.data" with lines title "theory" lt rgb "black, \
+    "../data/gamma.data" with lines title "theory" lt rgb "black, \

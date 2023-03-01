@@ -1,53 +1,26 @@
 SPATH = ./codepieces/
-OPATH = ./output/
+BPATH = ./build/
 DPATH = ./data/
-
-
+OPATH = ./output/
 
 default: 
-
-################################################################################
-Gamma.svg: gamma.gpi $(addprefix $(DPATH), gamma.data)
-	gnuplot $<
-
-LnGamma.svg: lngamma.gpi $(addprefix $(DPATH), lngamma.data)
-	gnuplot $<
+	cd $(BPATH) && $(MAKE)	
+	cd $(DPATH) && $(MAKE) 
+	cd $(OPATH) && $(MAKE)
 
 
+build:
+	cd $(BPATH) && $(MAKE)
 
-
-#################################################################################
-gamma.data: $(addprefix $(OPATH), evaluategammafunction.exe)
-	mono $< > $> $(addprefix $(DPATH), $@) 
-
-lngamma.data: $(addprefix $(OPATH), evaluatelngammafunction.exe)
-	mono $< > $> $(addprefix $(DPATH), $@) 
-
-
-
-
-#################################################################################
-evaluategammafunction.exe: $(addprefix $(SPATH), evaluategammafunction.cs) $(addprefix $(OPATH), sfuncs.dll)
-	mcs -target:exe -out:$(addprefix $(OPATH),$@) \
-		$(filter %.cs, $^)	\
-		$(addprefix -reference:,$(filter %.dll,$^))
-		
-evaluatelngammafunction.exe: $(addprefix $(SPATH), evaluatelngammafunction.cs) $(addprefix $(OPATH), sfuncs.dll)
-	mcs -target:exe -out:$(addprefix $(OPATH),$@) \
-		$(filter %.cs, $^)	\
-		$(addprefix -reference:,$(filter %.dll,$^))
-		
-
-
-
-
-#################################################################################
-sfuncs.dll: $(addprefix $(SPATH), erf.cs gamma.cs lngamma.cs)
-	mcs -target:library -out:$(addprefix $(OPATH),$@) $^
-
+plot:
+	$(RM) -rf $(addprefix $(OPATH), *.exe *.dll *.txt *.svg *.data)
+	cd $(OPATH) && $(MAKE)
 
 #################################################################################
 clean:
-	$(RM) -rf $(addprefix $(OPATH), *.exe *.dll *.txt *.svg)
-	$(RM) -rf $(addprefix $(DPATH), *.data)
+	$(RM) -rf $(addprefix $(SPATH), *.exe *.dll *.txt *.svg *.data)
+	$(RM) -rf $(addprefix $(BPATH), *.exe *.dll *.txt *.svg *.data)
+	$(RM) -rf $(addprefix $(DPATH), *.exe *.dll *.txt *.svg *.data)
+	$(RM) -rf $(addprefix $(OPATH), *.exe *.dll *.txt *.svg *.data)
 	clear
+	@echo cleaned
