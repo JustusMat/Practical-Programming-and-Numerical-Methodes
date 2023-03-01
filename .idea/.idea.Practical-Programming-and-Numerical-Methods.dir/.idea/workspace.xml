@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aa1720c1-25a3-474a-a49f-6bd2372d71cc" name="Changes" comment="" />
+    <list default="true" id="aa1720c1-25a3-474a-a49f-6bd2372d71cc" name="Changes" comment="better better file structure" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -70,6 +70,7 @@
       <workItem from="1675798226951" duration="74000" />
       <workItem from="1676652447857" duration="481000" />
       <workItem from="1676653310287" duration="371000" />
+      <workItem from="1677674608779" duration="307000" />
     </task>
     <task id="LOCAL-00001" summary="Deleted unnecessary files">
       <created>1675789756114</created>
@@ -106,7 +107,21 @@
       <option name="project" value="LOCAL" />
       <updated>1676652844878</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Better file structure">
+      <created>1677674835665</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1677674835665</updated>
+    </task>
+    <task id="LOCAL-00007" summary="better better file structure">
+      <created>1677674891533</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1677674891533</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -132,7 +147,9 @@
     <MESSAGE value="Added Week_II folder and exercise_math.cs" />
     <MESSAGE value="Renamed folder" />
     <MESSAGE value="Cleaning and creating new structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cleaning and creating new structure" />
+    <MESSAGE value="Better file structure" />
+    <MESSAGE value="better better file structure" />
+    <option name="LAST_COMMIT_MESSAGE" value="better better file structure" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
