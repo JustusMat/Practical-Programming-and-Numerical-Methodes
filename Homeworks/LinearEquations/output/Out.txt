@@ -1,0 +1,50 @@
+ A 
+--------------------------------------------------
+Matrix A:
+
+         1          2 
+         3         -5 
+------------------------------
+Q matrix through decomposition:
+
+     0.316      0.949 
+     0.949     -0.316 
+------------------------------
+R matrix through decomposition:
+
+      3.16      -4.11 
+         0       3.48 
+------------------------------
+Demonstration of orthogonality (Q^TQ = 1):
+
+         1  -5.55e-17 
+ -5.55e-17          1 
+------------------------------
+Demonstration of decomposition elements constructing matrix A (QR=A):
+
+         1          2 
+         3         -5 
+------------------------------
+|det(A)|=11
+------------------------------
+Solving with vector b given by:
+         4          1 
+Solution is x=
+         2          1 
+------------------------------
+Evaluating A*x (=b):
+         4          1 
+------------------------------
+ B 
+--------------------------------------------------
+Demonstration of inverse A:
+
+     0.455      0.182 
+     0.273    -0.0909 
+------------------------------
+Demonstrating the identity condition (A*Ainv=1)
+
+         1  -5.55e-17 
+         0          1 
+------------------------------
+Done

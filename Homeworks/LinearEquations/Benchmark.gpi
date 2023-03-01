@@ -1,0 +1,18 @@
+set terminal svg background "white"
+set output "Benchmark.svg"
+set xlabel "N elements"
+set ylabel "System ticks"
+set tics in
+set title "Benchmark of QR decomposition \n through Gram-Schmidt method"
+set key top left
+
+
+
+f(x) = A*x**3
+
+fit f(x) "../data/Benchmark.data" via A
+
+
+plot [0:1000] \
+    "../data/Benchmark.data" with lines title "Data" lt rgb "black", \
+    f(x) w l lc "red" title sprintf("fit Ax^3: A=%g",A)
