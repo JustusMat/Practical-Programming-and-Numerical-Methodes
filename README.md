@@ -8,7 +8,7 @@ git clone https://github.com/JustusMat/Practical-Programming-and-Numerical-Metho
 
 ## Status of exercises
 #### Week I
-![Progress](https://progress-bar.dev/100/?title=/hello) <br />
+![Progress](https://progress-bar.dev/100/?title=/hello)  /Exercises/hello <br />
 #### Week II
 ![Progress](https://progress-bar.dev/100/?title=/epsilon) <br />
 ![Progress](https://progress-bar.dev/100/?title=/math) <br />
