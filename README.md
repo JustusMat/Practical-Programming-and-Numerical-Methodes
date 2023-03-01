@@ -8,22 +8,22 @@ git clone https://github.com/JustusMat/Practical-Programming-and-Numerical-Metho
 
 ## Status of exercises
 #### Week I
-![Progress](https://progress-bar.dev/100/?title=/hello)  /Exercises/hello <br />
+![Progress](https://progress-bar.dev/100/?title=/hello) [/hello](/Exercises/hello) <br />
 #### Week II
-![Progress](https://progress-bar.dev/100/?title=/epsilon) <br />
-![Progress](https://progress-bar.dev/100/?title=/math) <br />
-![Progress](https://progress-bar.dev/100/?title=/vec) <br />
+![Progress](https://progress-bar.dev/100/?title=/epsilon) [/epsilon](/Exercises/epsilon) <br />
+![Progress](https://progress-bar.dev/100/?title=/math) [/math](/Exercises/math)<br />
+![Progress](https://progress-bar.dev/100/?title=/vec) [/vec](/Exercises/vec)<br />
 #### Week III
-![Progress](https://progress-bar.dev/100/?title=/complex) <br />
-![Progress](https://progress-bar.dev/100/?title=/generic_list) <br />
-![Progress](https://progress-bar.dev/100/?title=/inputoutput) <br />
+![Progress](https://progress-bar.dev/100/?title=/complex) [/complex](/Exercises/complex)<br />
+![Progress](https://progress-bar.dev/100/?title=/generic_list) [/generic_list](/Exercises/generic_list)<br />
+![Progress](https://progress-bar.dev/100/?title=/inputoutput) [/inputoutput](/Exercises/inputoutput)<br />
 #### Week IV
-![Progress](https://progress-bar.dev/100/?title=/multiprocessing) <br />
-![Progress](https://progress-bar.dev/100/?title=/scientificplotting) <br />
+![Progress](https://progress-bar.dev/100/?title=/multiprocessing) [/multiprocessing](/Exercises/multiprocessing)<br />
+![Progress](https://progress-bar.dev/100/?title=/scientificplotting) [/scientificplotting](/Exercises/scientificplotting)<br />
 
 ## Status of homeworks
 #### Week V
-![Progress](https://progress-bar.dev/82/?title=/LinearEquations) <br />
+![Progress](https://progress-bar.dev/82/?title=/LinearEquations) [/LinearEquations](/Homeworks/LinearEquations)<br />
 
 
 ### Upload
