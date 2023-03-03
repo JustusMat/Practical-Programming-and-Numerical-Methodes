@@ -14,6 +14,7 @@ public class randommatrixclass : matrix
 
     public randommatrixclass(int n, int m) : base(n, m)
     {
+        RandomEntries();
     }
     public randommatrixclass(string s) : base(s)
     {

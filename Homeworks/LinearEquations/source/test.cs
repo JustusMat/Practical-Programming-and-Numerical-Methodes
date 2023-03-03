@@ -5,7 +5,7 @@
         //A part
         System.Console.WriteLine(" A ");
         Line();
-        var A = new randommatrixclass(3,2);
+        var A = new matrix("1 2; 3 -5");
         System.Console.WriteLine("Matrix A:");
         A.print();
         Line(30);
@@ -30,8 +30,7 @@
         double determinat = matrixsolver.Determinat();
         System.Console.WriteLine($"|det(A)|={determinat}");
         Line(30);
-        //var b = new vector(4, 1);
-        var b = new vector(1, 3, 2);
+        var b = new vector(4, 1);
         System.Console.WriteLine("Solving with vector b given by:");
         b.print();
         var x = matrixsolver.Solve(b);
@@ -42,6 +41,21 @@
         var bDemonstration = A * x;
         bDemonstration.print();
         Line(30);
+        
+        
+        //B part
+        System.Console.WriteLine(" B ");
+        Line();
+        System.Console.WriteLine("Demonstration of inverse A:");
+        var Ainv = matrixsolver.Inverse();
+        Ainv.print();
+        Line(30);
+        System.Console.WriteLine("Demonstrating the identity condition (A*Ainv=1)");
+        var identityDemonstration = A * Ainv;
+        identityDemonstration.print();
+        Line(30);
+        System.Console.WriteLine("Done");
+        
     }
 
 

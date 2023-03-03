@@ -15,6 +15,7 @@ build:
 
 clean:
 	$(RM) -rf $(addprefix $(BPATH), *.exe *.dll)
-	$(RM) -rf $(addprefix $(OPATH), *.txt)
+	$(RM) -rf $(addprefix $(DPATH), *.data)
+	$(RM) -rf $(addprefix $(OPATH), *.txt *.svg *.log)
 	clear
 	@echo all build and output files cleared 	
