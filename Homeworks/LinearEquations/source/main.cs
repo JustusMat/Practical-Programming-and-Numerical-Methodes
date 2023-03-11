@@ -5,7 +5,7 @@
         //A part
         System.Console.WriteLine(" A ");
         Line();
-        var A = new randommatrixclass(3,2);
+        var A = new randommatrixclass(2,2);
         System.Console.WriteLine("Matrix A:");
         A.print();
         Line(30);

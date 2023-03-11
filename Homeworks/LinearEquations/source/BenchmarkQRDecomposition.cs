@@ -15,8 +15,8 @@ public class BenchmarkQRDecomposition
             var watch = System.Diagnostics.Stopwatch.StartNew();
             var QRDecompositionObject = new QRGS(A);
             watch.Stop();
-            var elapsedMs = watch.ElapsedTicks;
-            System.Console.WriteLine($"{i} {elapsedMs}");
+            var elapsedns = watch.Elapsed.TotalMilliseconds * 1000000;
+            System.Console.WriteLine($"{i} {elapsedns}");
         }
         
     }        

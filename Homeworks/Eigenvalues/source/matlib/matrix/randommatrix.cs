@@ -19,7 +19,7 @@ public class randommatrix : matrix
         {
             for (int j = i; j < this.size2; j++)
             {
-                this.set(i, j, random.NextDouble() - 1.0);
+                this.set(i, j, 2*random.NextDouble() - 1.0);
                 this.set(j,i,this.get(i,j));
             }
         }

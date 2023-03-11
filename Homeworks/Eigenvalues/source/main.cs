@@ -2,16 +2,15 @@
 {
     public static void Main(string[] args)
     {
-        //var A = new randommatrix(2, 2);
-        //A.RandomSymmetricEntries();
         Line();
         Line();
-        var A = new matrix("1 2 ; 3 4");
+        var A = new randommatrix(2, 2);
+        A.RandomSymmetricEntries();
         System.Console.WriteLine("Random matrix A given by");
         A.print();
         Line();
         var jacobiAlgorithmObject = new jacobieigenvaluealgorithm(A);
-        jacobiAlgorithmObject.EigenValueDecomposition();
+        jacobiAlgorithmObject.EigenValueDecomposition(tolerance:1e-12);
         System.Console.WriteLine("Eigenvalues");
         jacobiAlgorithmObject.Eigenvalues.print();
         System.Console.WriteLine($"Applied sweeps = {jacobiAlgorithmObject.sweeps}");

@@ -1,9 +1,9 @@
 set terminal svg background "white"
 set output "Benchmark.svg"
 set xlabel "N elements"
-set ylabel "System ticks"
+set ylabel "Elapsed nanoseconds"
 set tics in
-set title "Benchmark of QR decomposition \n through Gram-Schmidt method"
+set title "Benchmark of QR decomposition \n with Gram-Schmidt method"
 set key top left
 
 

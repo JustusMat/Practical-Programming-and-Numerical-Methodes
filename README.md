@@ -23,7 +23,7 @@ git clone https://github.com/JustusMat/Practical-Programming-and-Numerical-Metho
 
 ## Status of homeworks
 #### Week V
-![Progress](https://progress-bar.dev/99/?title=/LinearEquations) [/LinearEquations](/Homeworks/LinearEquations)<br />
+![Progress](https://progress-bar.dev/100/?title=/LinearEquations) [/LinearEquations](/Homeworks/LinearEquations)<br />
 #### Week VI
 ![Progress](https://progress-bar.dev/75/?title=/Eigenvalues) [/Eigenvalues](/Homeworks/Eigenvalues)<br />
 
