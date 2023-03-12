@@ -1,0 +1,27 @@
+set terminal svg background "white"
+set output "Fit.svg"
+set tics in
+set key top right
+#set logscale y
+
+
+set xlabel "Time [Days]" font ",20"
+set ylabel "Activity [Becquerel]" font ",20"
+set title "Activity fit of ThX" font ",25"
+
+
+#Extract the parameters from the string
+fit_params = system("awk '{print $1}' '../data/FitResults.data'")
+fit_errors = system("awk '{print $2}' '../data/FitResults.data'")
+
+fpUnc(x) = exp(word(fit_params, 1)+5*word(fit_errors,1) -(word(fit_params, 2) + 5*word(fit_errors,2))*x)
+fmUnc(x) = exp(word(fit_params, 1)-5*word(fit_errors,1) -(word(fit_params, 2) - 5*word(fit_errors,2))*x)
+
+
+set datafile separator ' '
+plot "../data/data.data" with lines title "Fit" lt rgb "black", \
+    "../data/exampledata.dat" u 1:2:3 w errorbars title "Data" pt 7 lc rgb "black", \
+    fpUnc(x) title "Fit + Error" with lines lt rgb "red", \
+    fmUnc(x) title "Fit - Error" with lines lt rgb "blue"
+
+    
