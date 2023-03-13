@@ -72,7 +72,7 @@ public class Program
         Line();
         System.Console.WriteLine("The activity of ThX alias 224Ra is: t_(1/2) = 3.66(4) d ");
         //Error propagation :)
-        System.Console.WriteLine($"The fitted half life is: t_(1/2) = {System.Math.Round(System.Math.Log(2)/c[1],2)}({   System.Math.Round(System.Math.Pow(System.Math.Round(System.Math.Log(2)/c[1],2),2) *cUncertainties[1],2)}) d");
+        System.Console.WriteLine($"The fitted half life is: t_(1/2) = {System.Math.Round(System.Math.Log(2)/c[1],2)} +- {   System.Math.Round(System.Math.Pow(System.Math.Round(System.Math.Log(2)/c[1],2),2) *cUncertainties[1],2)} d");
     }
 
     public static double Fc(System.Func<double, double>[] fs, vector c, double x)

@@ -26,7 +26,7 @@ git clone https://github.com/JustusMat/Practical-Programming-and-Numerical-Metho
 ![Progress](https://progress-bar.dev/100/?title=/LinearEquations) [/LinearEquations](/Homeworks/LinearEquations)<br />
 #### Week VI
 ![Progress](https://progress-bar.dev/75/?title=/Eigenvalues) [/Eigenvalues](/Homeworks/Eigenvalues)<br />
-![Progress](https://progress-bar.dev/95/?title=/LeastSquares) [/LeastSquares](/Homeworks/LeastSquares)<br />
+![Progress](https://progress-bar.dev/99/?title=/LeastSquares) [/LeastSquares](/Homeworks/LeastSquares)<br />
 
 
 ### Upload

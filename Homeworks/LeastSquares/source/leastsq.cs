@@ -22,7 +22,7 @@ public class leastsq
         vector cUncertainties = new vector(c.size);
         for (int i = 0; i < cUncertainties.size; i++)
         {
-            cUncertainties[i] = System.Math.Sqrt(CovarianceMatrix[i, i] * CovarianceMatrix[i, i]);
+            cUncertainties[i] = System.Math.Sqrt(CovarianceMatrix[i, i]);
         }
         
         return (c, cUncertainties, S, CovarianceMatrix);
