@@ -13,8 +13,8 @@ set title "Activity fit of ThX" font ",25"
 fit_params = system("awk '{print $1}' '../data/FitResults.data'")
 fit_errors = system("awk '{print $2}' '../data/FitResults.data'")
 
-fpDecayUnc(x) = exp(word(fit_params, 1) -(word(fit_params, 2) + 5*word(fit_errors,2))*x)
-fmDecayUnc(x) = exp(word(fit_params, 1) -(word(fit_params, 2) - 5*word(fit_errors,2))*x)
+fpDecayUnc(x) = exp(word(fit_params, 1) -(word(fit_params, 2) + word(fit_errors,2))*x)
+fmDecayUnc(x) = exp(word(fit_params, 1) -(word(fit_params, 2) - word(fit_errors,2))*x)
 
 fpAmpUnc(x) = exp(word(fit_params, 1)+5*word(fit_errors,1) -(word(fit_params, 2))*x)
 fmAmpUnc(x) = exp(word(fit_params, 1)-5*word(fit_errors,1) -(word(fit_params, 2))*x)
@@ -23,6 +23,6 @@ fmAmpUnc(x) = exp(word(fit_params, 1)-5*word(fit_errors,1) -(word(fit_params, 2)
 set datafile separator ' '
 plot "../data/data.data" with lines title "Fit" lt rgb "black", \
     "../data/exampledata.dat" u 1:2:3 w errorbars title "Data" pt 7 lc rgb "black", \
-    fpDecayUnc(x) title "Fit: λ+5dλ" with lines lt rgb "blue", \
-    fmDecayUnc(x) title "Fit: λ-5dλ" with lines lt rgb "red"
+    fpDecayUnc(x) title "Fit: λ+dλ" with lines lt rgb "blue", \
+    fmDecayUnc(x) title "Fit: λ-dλ" with lines lt rgb "red"
     

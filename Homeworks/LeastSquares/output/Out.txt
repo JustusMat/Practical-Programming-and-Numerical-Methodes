@@ -22,5 +22,5 @@ Covariance matrix
    0.00115   0.000178 
   0.000178   4.85e-05 
 --------------------------------------------------
-The activity of ThX alias 224Ra is: t_(1/2) = 3.66(4) d 
-The fitted half life is: t_(1/2) = 4.08 +- 0.12 d
+The half life of ThX alias 224Ra is: t_(1/2) = 3.66(4) d 
+The fitted half life is: t_(1/2) = 4.08 +- 0.17 d
