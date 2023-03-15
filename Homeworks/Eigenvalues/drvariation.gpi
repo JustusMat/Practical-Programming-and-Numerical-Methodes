@@ -1,0 +1,9 @@
+set terminal svg background "white"
+set output "drvariation.svg"
+set xlabel "rmax" font ",20"
+set ylabel "E0" font ",20"
+set tics in
+set key top right
+set title "dr variation" font ",25"
+
+plot "../data/Variation_dr.data" using 2:3 pt 7 ps 0.5 title "dr variation"

@@ -1,0 +1,13 @@
+set terminal svg background "white"
+set output "Hydrogenwaves.svg"
+set xlabel "radius [a0]" font ",20"
+set ylabel "Radial probability amplitude" font ",20"
+set tics in
+set key top right
+set title "Probability densities H-atom" font ",25"
+
+
+
+plot for [i=2:*] "../data/hydrogenwaves.data" using 1:i with lines title sprintf("%ds",i-1)
+
+

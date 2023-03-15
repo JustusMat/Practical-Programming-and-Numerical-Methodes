@@ -25,6 +25,5 @@ clean:
 	$(RM) - rf $(addprefix $(BPATH), *.exe *.dll)
 	$(RM) - rf $(addprefix $(DPATH), *.data *.txt)
 	$(RM) - rf $(addprefix $(OPATH), *.svg *.log *.txt)
-	$(RM) - rf  *.txt
 	clear
 	@echo all build, data and output files cleared

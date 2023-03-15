@@ -25,6 +25,8 @@ public class hydrogendiagonalisation
         var jacobiObject = new jacobieigenvaluealgorithm(hydrogenObject.Hamiltonian);
         jacobiObject.EigenValueDecomposition();
 
+        
+        /*
         int ifac = 5;
         double solutionFactor = jacobiObject.V[ifac, 0]/(hydrogenObject.r[ifac]*System.Math.Exp(-hydrogenObject.r[ifac]));
         for (int i = 0; i < jacobiObject.Eigenvalues.size; i++)
@@ -32,10 +34,17 @@ public class hydrogendiagonalisation
             //System.Console.WriteLine($"{hydrogenObject.r[i]} {jacobiObject.Eigenvalues[i]}");
             System.Console.WriteLine($"{hydrogenObject.r[i]} {F(hydrogenObject.r[i],factor:solutionFactor)}");
         }
+        */
+        
+        var E0 = jacobiObject.Eigenvalues[0];
+        System.Console.WriteLine($"{rmax} {dr} {E0}");
+        
     }
 
     public static double F(double z, double factor = 2.0)
     {
         return z * System.Math.Exp(-z) * factor;
     }
+    
+    
 }

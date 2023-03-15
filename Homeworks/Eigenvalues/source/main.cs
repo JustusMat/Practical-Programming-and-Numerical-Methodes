@@ -4,7 +4,7 @@
     {
         Line();
         Line();
-        var A = new randommatrix(2, 2);
+        var A = new randommatrix(3, 3);
         A.RandomSymmetricEntries();
         System.Console.WriteLine("Random matrix A given by");
         A.print();

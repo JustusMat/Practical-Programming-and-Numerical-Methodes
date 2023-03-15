@@ -1,19 +1,25 @@
 SPATH = ../source/
 SPATH_matlib = $(addprefix $(SPATH), matlib/matrix/)
 
-default: main.exe hydrogenswave.exe hydrogenswaveexample.exe matrixlibrary.dll
+default: main.exe hydrogendiagonalisation.exe hydrogendiagonalisationexample.exe hydrogenwavefunction.exe matrixlibrary.dll
 
 main.exe: $(addprefix $(SPATH), main.cs jacobieigenvaluealgorithm.cs) matrixlibrary.dll
 	mcs -target:exe -out:$@ \
 		$(filter %.cs,$^) \
 		$(addprefix -reference:, $(filter %.dll, $^))
 
-hydrogenswaveexample.exe: $(addprefix $(SPATH), hydrogenhamiltonianclass.cs hydrogendiagonalisationexample.cs jacobieigenvaluealgorithm.cs) matrixlibrary.dll
+
+hydrogenwavefunction.exe: $(addprefix $(SPATH), hydrogenwavefunction.cs)
+	mcs -target:exe -out:$@ \
+		$(filter %.cs, $^) \
+
+
+hydrogendiagonalisationexample.exe: $(addprefix $(SPATH), hydrogenhamiltonianclass.cs hydrogendiagonalisationexample.cs jacobieigenvaluealgorithm.cs) matrixlibrary.dll
 	mcs -target:exe -out:$@ \
 		$(filter %.cs ,$^) \
 		$(addprefix -reference:, $(filter %.dll, $^))
 
-hydrogenswave.exe: $(addprefix $(SPATH), hydrogenhamiltonianclass.cs hydrogendiagonalisation.cs jacobieigenvaluealgorithm.cs) matrixlibrary.dll
+hydrogendiagonalisation.exe: $(addprefix $(SPATH), hydrogenhamiltonianclass.cs hydrogendiagonalisation.cs jacobieigenvaluealgorithm.cs) matrixlibrary.dll
 	mcs -target:exe -out:$@ \
 		$(filter %.cs , $^) \
 		$(addprefix -reference:, $(filter %.dll, $^))
