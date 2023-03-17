@@ -1,7 +1,7 @@
 SPATH = ../source/
 SPATH_matlib = $(addprefix $(SPATH), matlib/matrix/)
 
-default: main.exe main.exe
+default: main.exe
 
 test.exe: $(addprefix $(SPATH), test.cs QRGramSchmidt.cs) matrixlibrary.dll
 	mcs -target:exe -out:$@ \

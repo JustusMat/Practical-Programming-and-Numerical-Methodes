@@ -1,0 +1,19 @@
+set term svg background rgb "white"
+set output "Interpolation.svg"
+set tics in
+set key top right
+
+set xlabel "x" font ",20"
+set ylabel "f(x)" font ",20"
+set title "Sinc(x)" font ",25"
+
+#set xrange [-6.5:6.5]
+#set yrange [-0.4:1.2]
+
+
+
+set datafile separator ' '
+plot "../data/interpolationdata.data" u 1:2 with points pointtype 7 linecolor "black" pointsize 1 title "Interpolation Points", \
+    "../data/GraphData.data" u 1:2 with lines linetype 1 linecolor "black" linewidth 1 title "Sinc(x)", \
+    "../data/GraphData.data" u 1:3 with lines linetype 1 linecolor "red" linewidth 1 title "Linear interp.", \
+    "../data/GraphData.data" u 1:4 with lines linetype 1 linecolor "blue" linewidth 1 title "Quadratic interp."

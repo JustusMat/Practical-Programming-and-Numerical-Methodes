@@ -1,0 +1,14 @@
+set term svg background rgb "white"
+set output "Integration.svg"
+set tics in
+set key bottom right
+#set logscale y
+
+set xlabel "x" font ",20"
+set ylabel "f(x)" font ",20"
+set title "Antiderivative of Sinc(x)" font ",25"
+
+
+plot "../data/integratedinterpolated.data" u 1:3 with lines linetype 1 linecolor "red"  title "Linear interp.", \
+     "../data/integratedinterpolated.data" u 1:2 with lines linetype 1 linecolor "black" title "Antiderivative of Sinc(x)",\
+     "../data/integratedinterpolated.data" u 1:4 with lines linetype 1 linecolor "blue" title "Quadratic interp."

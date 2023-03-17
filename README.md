@@ -6,6 +6,21 @@ To clone the repository go into your favourite directory and do
 git clone https://github.com/JustusMat/Practical-Programming-and-Numerical-Methods.git
 ```
 
+## Status of homeworks
+
+| #   |                    Homework                    |  A  |  B |  C  |  Σ  |  
+|:----|:----------------------------------------------:|:---:|:--:|:---:|:---:|
+|1| LinearEquations |6|3|1|10|
+
+#### Week V
+![Progress](https://progress-bar.dev/100/?title=/LinearEquations) [/LinearEquations](/Homeworks/LinearEquations)<br />
+#### Week VI
+![Progress](https://progress-bar.dev/80/?title=/Eigenvalues) [/Eigenvalues](/Homeworks/Eigenvalues)<br />
+![Progress](https://progress-bar.dev/100/?title=/LeastSquares) [/LeastSquares](/Homeworks/LeastSquares)<br />
+#### Week VII
+![Progress](https://progress-bar.dev/90/?title=/Eigenvalues) [/Splines](/Homeworks/Splines)<br />
+
+
 ## Status of exercises
 #### Week I
 ![Progress](https://progress-bar.dev/100/?title=/hello) [/hello](/Exercises/hello) <br />
@@ -20,13 +35,6 @@ git clone https://github.com/JustusMat/Practical-Programming-and-Numerical-Metho
 #### Week IV
 ![Progress](https://progress-bar.dev/100/?title=/multiprocessing) [/multiprocessing](/Exercises/multiprocessing)<br />
 ![Progress](https://progress-bar.dev/100/?title=/scientificplotting) [/scientificplotting](/Exercises/scientificplotting)<br />
-
-## Status of homeworks
-#### Week V
-![Progress](https://progress-bar.dev/100/?title=/LinearEquations) [/LinearEquations](/Homeworks/LinearEquations)<br />
-#### Week VI
-![Progress](https://progress-bar.dev/95/?title=/Eigenvalues) [/Eigenvalues](/Homeworks/Eigenvalues)<br />
-![Progress](https://progress-bar.dev/100/?title=/LeastSquares) [/LeastSquares](/Homeworks/LeastSquares)<br />
 
 
 ### Upload
