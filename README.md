@@ -10,7 +10,14 @@ git clone https://github.com/JustusMat/Practical-Programming-and-Numerical-Metho
 
 | #   |                    Homework                    |  A  |  B |  C  |  Σ  |  
 |:----|:----------------------------------------------:|:---:|:--:|:---:|:---:|
-|1| LinearEquations |6|3|1|10|
+|1| [/LinearEquations](/Homeworks/LinearEquations) |6|3|1|10|
+|2| [/Eigenvalues](/Homeworks/Eigenvalues) |6|3|-|9|
+|3| [/LeastSquares](/Homeworks/LeastSquares) |6|3|1|10|
+|4| [/Splines](/Homeworks/Splines) |6|3|-|9|
+|| ||||Total points: 38|
+
+
+
 
 #### Week V
 ![Progress](https://progress-bar.dev/100/?title=/LinearEquations) [/LinearEquations](/Homeworks/LinearEquations)<br />
