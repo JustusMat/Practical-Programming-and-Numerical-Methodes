@@ -9,9 +9,10 @@ main.exe: $(addprefix $(SPATH), main.cs jacobieigenvaluealgorithm.cs) matrixlibr
 		$(addprefix -reference:, $(filter %.dll, $^))
 
 
-hydrogenwavefunction.exe: $(addprefix $(SPATH), hydrogenwavefunction.cs)
+hydrogenwavefunction.exe: $(addprefix $(SPATH), hydrogenhamiltonianclass.cs hydrogenwavefunction.cs jacobieigenvaluealgorithm.cs) matrixlibrary.dll
 	mcs -target:exe -out:$@ \
 		$(filter %.cs, $^) \
+		$(addprefix -reference:, $(filter %.dll, $^))
 
 
 hydrogendiagonalisationexample.exe: $(addprefix $(SPATH), hydrogenhamiltonianclass.cs hydrogendiagonalisationexample.cs jacobieigenvaluealgorithm.cs) matrixlibrary.dll
