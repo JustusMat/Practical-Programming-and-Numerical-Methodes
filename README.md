@@ -14,7 +14,7 @@ git clone https://github.com/JustusMat/Practical-Programming-and-Numerical-Metho
 |2| [/Eigenvalues](/Homeworks/Eigenvalues) |6|3|-|9|
 |3| [/LeastSquares](/Homeworks/LeastSquares) |6|3|1|10|
 |4| [/Splines](/Homeworks/Splines) |6|3|-|9|
-|5| [/Splines](/Homeworks/ODE) |6|-|-|6|
+|5| [/ODE](/Homeworks/ODE) |6|-|-|6|
 || ||||Total points: 44|
 
 
@@ -23,7 +23,7 @@ git clone https://github.com/JustusMat/Practical-Programming-and-Numerical-Metho
 #### Week V
 ![Progress](https://progress-bar.dev/100/?title=/LinearEquations) [/LinearEquations](/Homeworks/LinearEquations)<br />
 #### Week VI
-![Progress](https://progress-bar.dev/85/?title=/Eigenvalues) [/Eigenvalues](/Homeworks/Eigenvalues)<br />
+![Progress](https://progress-bar.dev/90/?title=/Eigenvalues) [/Eigenvalues](/Homeworks/Eigenvalues)<br />
 ![Progress](https://progress-bar.dev/100/?title=/LeastSquares) [/LeastSquares](/Homeworks/LeastSquares)<br />
 #### Week VII
 ![Progress](https://progress-bar.dev/90/?title=/Splines) [/Splines](/Homeworks/Splines)<br />

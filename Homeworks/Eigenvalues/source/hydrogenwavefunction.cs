@@ -23,6 +23,7 @@ public class hydrogenwavefunction
         var jacobiObject = new jacobieigenvaluealgorithm(hydrogenobject.Hamiltonian);
         jacobiObject.EigenValueDecomposition();
         var EigenVectorMatrix = jacobiObject.V.T;
+        EigenVectorMatrix *= System.Math.Sqrt(1.0 / dr);
 
         using (System.IO.StreamWriter writer = new System.IO.StreamWriter("../data/NumericalSWaves.data"))
         {
@@ -30,16 +31,9 @@ public class hydrogenwavefunction
             var S2 = EigenVectorMatrix.rows(1, 1);
             var S3 = EigenVectorMatrix.rows(2, 2);
 
-            double f1, f2, f3;
-            f1 = 4.6;
-            f2 = 1.0/4.0;
-            f3 = 1.0/16.0; 
-            
-                
             for (int i = 0; i < S1.size2; i++)
             {
-                double r2 = hydrogenobject.r[i]*hydrogenobject.r[i] ;
-                writer.WriteLine($"{hydrogenobject.r[i]} {f1*r2*S1[0,i]*S1[0,i]} {f2*r2*S2[0,i]*S2[0,i]} {f3*r2*S3[0,i]*S3[0,i]}");
+                writer.WriteLine($"{hydrogenobject.r[i]} {S1[0,i]*S1[0,i]} {S2[0,i]*S2[0,i]} {S3[0,i]*S3[0,i]}");
             }
         }
         
