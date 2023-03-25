@@ -1,0 +1,21 @@
+set terminal gif animate delay 5    #5 ms
+set output "animation.gif"
+
+#Get the number of frames from the data file
+filedata = '../data/LotkaVolterra.data'
+n = system(sprintf('cat %s | wc -l', filedata))
+
+# Set the range for the x and y axes
+set xrange [-1:13]
+set yrange [-1:13]
+
+
+#Set up the initial plot
+plot filedata using 2:3 every ::0::0 with points pt 7 lc rgb "black" notitle, \
+     filedata using 2:3 every ::0::0 with lines lc rgb "black"
+
+#loop through the data and update the plot
+do for [i=1:n-1]{
+    plot filedata using 2:3 every ::i::i with points pt 7 ps 2 lc rgb "black" notitle, \
+         filedata using 2:3 every ::0::i with lines lw 2 lc rgb "black" notitle
+}

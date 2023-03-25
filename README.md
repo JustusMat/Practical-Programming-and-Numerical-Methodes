@@ -14,8 +14,8 @@ git clone https://github.com/JustusMat/Practical-Programming-and-Numerical-Metho
 |2| [/Eigenvalues](/Homeworks/Eigenvalues) |6|3|-|9|
 |3| [/LeastSquares](/Homeworks/LeastSquares) |6|3|1|10|
 |4| [/Splines](/Homeworks/Splines) |6|3|-|9|
-|5| [/ODE](/Homeworks/ODE) |6|-|-|6|
-|| ||||Total points: 44|
+|5| [/ODE](/Homeworks/ODE) |6|3|1|10|
+|| ||||Total points: 48|
 
 
 

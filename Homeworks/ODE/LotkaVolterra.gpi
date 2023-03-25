@@ -1,0 +1,16 @@
+set term svg background rgb "white"
+set output "LotkaVolterra.svg"
+set tics in
+set key top left
+
+set xlabel "t" font ",20"
+set ylabel "f(t)" font ",20"
+set title "Lotka-Volterra System" font ",25"
+
+set xrange [-0.5:15.5]
+set yrange [-0.25:13.0]
+
+plot "../data/LotkaVolterra.data" u 1:2 with lines linetype 1 linecolor "black" linewidth 1 title "x",\
+     "../data/LotkaVolterra.data" u 1:3 with lines linetype 1 linecolor "red" linewidth 1 title "y", \
+     "../data/LotkaVolterraEndpoint.data" u 1:2 pt 7 lc "black" title "Endpoint x", \
+     "../data/LotkaVolterraEndpoint.data" u 1:3 pt 7 lc "red" title "Endpoint y", \
