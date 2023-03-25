@@ -28,7 +28,7 @@ git clone https://github.com/JustusMat/Practical-Programming-and-Numerical-Metho
 #### Week VII
 ![Progress](https://progress-bar.dev/90/?title=/Splines) [/Splines](/Homeworks/Splines)<br />
 #### Week VIII
-![Progress](https://progress-bar.dev/60/?title=/ODE) [/ODE](/Homeworks/ODE)<br />
+![Progress](https://progress-bar.dev/100/?title=/ODE) [/ODE](/Homeworks/ODE)<br />
 
 ## Status of exercises
 #### Week I
