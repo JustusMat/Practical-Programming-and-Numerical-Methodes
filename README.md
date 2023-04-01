@@ -15,7 +15,8 @@ git clone https://github.com/JustusMat/Practical-Programming-and-Numerical-Metho
 |3| [/LeastSquares](/Homeworks/LeastSquares) |6|3|1|10|
 |4| [/Splines](/Homeworks/Splines) |6|3|-|9|
 |5| [/ODE](/Homeworks/ODE) |6|3|1|10|
-|| ||||Total points: 48|
+|5| [/AdaptiveIntegration](/Homeworks/AdaptiveIntegration) |6|3|1|10|
+|| ||||Total points: 58|
 
 
 
@@ -29,6 +30,8 @@ git clone https://github.com/JustusMat/Practical-Programming-and-Numerical-Metho
 ![Progress](https://progress-bar.dev/90/?title=/Splines) [/Splines](/Homeworks/Splines)<br />
 #### Week VIII
 ![Progress](https://progress-bar.dev/100/?title=/ODE) [/ODE](/Homeworks/ODE)<br />
+#### Week IX
+![Progress](https://progress-bar.dev/100/?title=/AdaptiveIntegration) [/AdaptiveIntegration](/Homeworks/AdaptiveIntegration)<br />
 
 ## Status of exercises
 #### Week I

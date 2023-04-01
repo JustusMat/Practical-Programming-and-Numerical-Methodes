@@ -1,0 +1,17 @@
+set term svg background rgb "white"
+set output "erf.svg"
+set tics in
+set key top left
+
+set xlabel "t" font ",20"
+set ylabel "f(t)" font ",20"
+set title "Errorfunction" font ",25"
+
+#Errorfunction from gnuplot
+set xrange [-5.5:5.5]
+set yrange [-1.1:1.1]
+
+
+plot "../data/erf.data" u 1:2 with lines linetype 1 linecolor "black" linewidth 2 title "Integral repr.", \
+    erf(x) with lines lt 1 lc "red" lw 2 dashtype 2 title "GnuPlot erf(x)"
+    

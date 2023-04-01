@@ -1,0 +1,28 @@
+------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------
+The integral of sqrt(x) from 0 to 1 is 2/3
+The recursive adaptive integral from 0 to 1 is 0.666680932893738 npoints=40
+The open quadrature integral with Clenshaw-Curtis variable transformation from 0 to 1 is 0.666666552998899 npoints=64
+------------------------------------------------------------------------------------------------------------------------
+The integral of 1/sqrt(x) from 0 to 1 is 2
+The recursive adaptive integral from 0 to 1 is 1.99999738796403 npoints=17140
+The open quadrature integral with Clenshaw-Curtis variable transformation from 0 to 1 is 1.9999998903107 npoints=52
+------------------------------------------------------------------------------------------------------------------------
+The integral of 4sqrt(1-x^2) from 0 to 1 is 3.14159265358979
+The recursive adaptive integral from 0 to 1 is 3.14159750770263 npoints=80
+The open quadrature integral with Clenshaw-Curtis variable transformation from 0 to 1 is 3.14159266117462 npoints=120
+------------------------------------------------------------------------------------------------------------------------
+The integral of ln(x)/sqrt(x) from 0 to 1 is -4
+The recursive adaptive integral from 0 to 1 is -3.99999834899021 npoints=29972
+The open quadrature integral with Clenshaw-Curtis variable transformation from 0 to 1 is -3.99999813339603 npoints=272
+------------------------------------------------------------------------------------------------------------------------
+The integral of 1/x^2 from 1 to infinity is 1
+The recursive adaptive integral from 1 to infinity is 1 npoints=4
+The recursive adpative integral error is 1.11022302462516E-16
+------------------------------------------------------------------------------------------------------------------------
+The gaussian integral from -Infinity to Infinity is 1.77245385090552
+The recursive adaptive integral from -Infinity to Infinity is 1.77269051667853 npoints=168
+The recursive adpative integral error is 0.000275897584715248
+------------------------------------------------------------------------------------------------------------------------
+The gaussian integral with numpy's trapz method from -10000.0 to 10000.0 is 1.772453850905516
+------------------------------------------------------------------------------------------------------------------------
