@@ -1,0 +1,23 @@
+set term svg background rgb "white"
+set output "Fit.svg"
+set tics in
+set key top right
+
+set xlabel "Energy [MeV/c²]" font ",20"
+set ylabel "cross section [?]" font ",20"
+#set xrange [90:170]
+#set yrange [-5:10]
+set samples 1000
+
+#Extract the parameters from the string
+fit_params = system("awk '{print $1, $2, $3}' '../data/fitresults.data'")
+A = word(fit_params,1)
+m = word(fit_params,2)
+Gamma = word(fit_params,3)
+
+BreitWigner(x) = A/((x-m)*(x-m) + Gamma*Gamma/4)
+
+plot "../data/higgs.dat" u 1:2:3 w errorbars title "Data" pt 7 lc rgb "black", \
+     BreitWigner(x) title "Fit" with lines lt rgb "red"
+    
+     

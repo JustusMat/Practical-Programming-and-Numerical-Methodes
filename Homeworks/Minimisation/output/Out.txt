@@ -1,0 +1,14 @@
+──────────────────────────────────────────────────
+──────────────────────────────────────────────────
+Minimising the RosenBrock function
+Initial guess:
+        10         10 
+The solution is converged in 5389 iterations at
+         1          1 
+──────────────────────────────────────────────────
+Minimising the HimmelBlau function
+Initial guess:
+        10         10 
+The solution is converged in 12 iterations at
+     -3.78      -3.28 
+──────────────────────────────────────────────────

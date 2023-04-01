@@ -1,0 +1,14 @@
+──────────────────────────────────────────────────
+Testing with a simple function
+f(x,y)= x² + y², (x0,y0)=(10,-10)
+The minimum of f in 2100 iterations at:
+  7.03e-07  -7.03e-07 
+──────────────────────────────────────────────────
+PseudoInverse / Gradient descent method
+The Rosenbrock minimum is in 455545 iterations at:
+         1          1 
+──────────────────────────────────────────────────
+Newton's method with numerical Jacobian and back-tracking linesearch
+The Rosenbrock minimum is in 2024 iterations at:
+         1          1 
+──────────────────────────────────────────────────

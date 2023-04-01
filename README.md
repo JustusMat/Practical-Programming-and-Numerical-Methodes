@@ -15,8 +15,11 @@ git clone https://github.com/JustusMat/Practical-Programming-and-Numerical-Metho
 |3| [/LeastSquares](/Homeworks/LeastSquares) |6|3|1|10|
 |4| [/Splines](/Homeworks/Splines) |6|3|-|9|
 |5| [/ODE](/Homeworks/ODE) |6|3|1|10|
-|5| [/AdaptiveIntegration](/Homeworks/AdaptiveIntegration) |6|3|1|10|
-|| ||||Total points: 58|
+|6| [/AdaptiveIntegration](/Homeworks/AdaptiveIntegration) |6|3|1|10|
+|7| [/MonteCarlo](/Homeworks/MonteCarlo) |6|3|1|10|
+|8| [/RootFinding](/Homeworks/RootFinding) |6|3|-|9|
+|9| [/Minimisation](/Homeworks/Minimisation) |6|3|-|9|
+|| ||||Total points: 86|
 
 
 
@@ -32,6 +35,12 @@ git clone https://github.com/JustusMat/Practical-Programming-and-Numerical-Metho
 ![Progress](https://progress-bar.dev/100/?title=/ODE) [/ODE](/Homeworks/ODE)<br />
 #### Week IX
 ![Progress](https://progress-bar.dev/100/?title=/AdaptiveIntegration) [/AdaptiveIntegration](/Homeworks/AdaptiveIntegration)<br />
+![Progress](https://progress-bar.dev/100/?title=/MonteCarlo) [/MonteCarlo](/Homeworks/MonteCarlo)<br />
+#### Week X
+![Progress](https://progress-bar.dev/90/?title=/RootFinding) [/RootFinding](/Homeworks/RootFinding)<br />
+#### Week XI
+![Progress](https://progress-bar.dev/90/?title=/Minimisation) [/Minimisation](/Homeworks/Minimisation)<br />
+
 
 ## Status of exercises
 #### Week I
