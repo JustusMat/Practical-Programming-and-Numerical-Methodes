@@ -15,7 +15,7 @@ git clone https://github.com/JustusMat/Practical-Programming-and-Numerical-Metho
 |3| [/LeastSquares](/Homeworks/LeastSquares) |6|3|1|10|
 |4| [/Splines](/Homeworks/Splines) |6|3|-|9|
 |5| [/ODE](/Homeworks/ODE) |6|3|1|10|
-|5| [/AdaptiveIntegration](/Homeworks/AdaptiveIntegration) |6|3|1|10|
+|6| [/AdaptiveIntegration](/Homeworks/AdaptiveIntegration) |6|3|1|10|
 || ||||Total points: 58|
 
 
