@@ -3,8 +3,8 @@ set output "Fit.svg"
 set tics in
 set key top right
 
-set xlabel "Energy [MeV/c²]" font ",20"
-set ylabel "cross section [?]" font ",20"
+set xlabel "Energy [GeV/c²]" font ",20"
+set ylabel "cross section [certain units]" font ",20"
 #set xrange [90:170]
 #set yrange [-5:10]
 set samples 1000
