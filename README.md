@@ -17,7 +17,7 @@ git clone https://github.com/JustusMat/Practical-Programming-and-Numerical-Metho
 |5| [/ODE](/Homeworks/ODE) |6|3|1|10|
 |6| [/AdaptiveIntegration](/Homeworks/AdaptiveIntegration) |6|3|1|10|
 |7| [/MonteCarlo](/Homeworks/MonteCarlo) |6|3|1|10|
-|8| [/RootFinding](/Homeworks/RootFinding) |6|3|-|9|
+|8| [/RootFinding](/Homeworks/RootFinding) |6|(3)|-|9|
 |9| [/Minimisation](/Homeworks/Minimisation) |6|3|-|9|
 || ||||Total points: 86|
 

@@ -2,8 +2,8 @@ public class BSHydrogen
 {
     public static void Main(string[] args)
     {
-        double acc = 1e-4;
-        double eps = 1e-8;
+        double acc = 1e-1;
+        double eps = 1e-6;
         double rmin = 0.001;
         double rmax = 8.0;
         vector E0initial = new vector(-0.7);
@@ -17,13 +17,12 @@ public class BSHydrogen
             acc: acc, eps: eps, xlist: rsNew, ylist: ysNew);
         for (int i = 0; i < xsGenlist.Size; i++)
         {
-            System.Console.Write($"{xsGenlist[i]} ");
+            string vals = $"{xsGenlist[i]} ";
             for (int j = 0; j < ysGenlist[i].size; j++)
             {
-                double y = System.Math.Pow(xsGenlist[i] * ysGenlist[i][j],2);
-                System.Console.Write($"{y} ");
+                vals += $"{ysGenlist[i][j]} ";
             }
-            System.Console.Write("\n");
+            System.Console.WriteLine(vals);
         }
     }
 
