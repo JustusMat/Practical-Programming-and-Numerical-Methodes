@@ -27,7 +27,7 @@ public class rootfindingclass
 
             //backtracking line search
             double lambda = 1.0;
-            while (f(x+lambda*dx).norm() >= (1-alpha*lambda)*F.norm() && lambda>lambdamin)
+            while (f(x+lambda*dx).norm() >= (1-beta*lambda)*F.norm() && lambda>lambdamin)
             {                
                 lambda *= beta; 
             }

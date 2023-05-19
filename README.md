@@ -5,7 +5,14 @@ To clone the repository go into your favourite directory and do
 ```
 git clone https://github.com/JustusMat/Practical-Programming-and-Numerical-Methods.git
 ```
-
+## Structure of homeworks
+Each task is constructed with four folders (source, build, data, output). Calling:
+```
+make
+```
+from the root of these folders, initially builds the libraries and .exe files in the build 
+directory using the source code in the source directory. This is followed by the generation of data in the 
+data directory and the presentation of the solutions in the output directory.
 ## Status of homeworks
 
 | #   |                    Homework                    |  A  |  B |  C  |  Σ  |  
@@ -19,7 +26,8 @@ git clone https://github.com/JustusMat/Practical-Programming-and-Numerical-Metho
 |7| [/MonteCarlo](/Homeworks/MonteCarlo) |6|3|1|10|
 |8| [/RootFinding](/Homeworks/RootFinding) |6|(3)|-|9|
 |9| [/Minimisation](/Homeworks/Minimisation) |6|3|-|9|
-|| ||||Total points: 86|
+|10| [/Minimisation](/Homeworks/Minimisation) |6|3|-|9|
+|| ||||Total points: 95|
 
 
 
@@ -40,7 +48,8 @@ git clone https://github.com/JustusMat/Practical-Programming-and-Numerical-Metho
 ![Progress](https://progress-bar.dev/90/?title=/RootFinding) [/RootFinding](/Homeworks/RootFinding)<br />
 #### Week XI
 ![Progress](https://progress-bar.dev/90/?title=/Minimisation) [/Minimisation](/Homeworks/Minimisation)<br />
-
+#### Week XII
+![Progress](https://progress-bar.dev/90/?title=/NeuralNetworks) [/NeuralNetworks](/Homeworks/NeuralNetworks)<br />
 
 ## Status of exercises
 #### Week I
