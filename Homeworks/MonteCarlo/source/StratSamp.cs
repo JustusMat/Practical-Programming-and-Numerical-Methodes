@@ -119,7 +119,6 @@ public class StratSamp
         return integralLeft + integralRight;
     }
     
-    
     public static double StratifiedSampling(int dim, System.Func<vector, double> f, vector a, vector b,
         int nReuse, double meanReuse, double epsilon = 1e-4, double accuracy = 1e-4)
     {
@@ -206,5 +205,6 @@ public class StratSamp
 
         return integralLeft + integralRight;
     }
+    
     
 }

@@ -1,5 +1,7 @@
 BPATH = ../build/
 OPATH = ../output/
 
-default:
-	@echo Nothing to do
+default: MonteCarloConvergenceTest
+
+MonteCarloConvergenceTest: $(addprefix $(BPATH), MonteCarloConvergenceTest.exe)
+	mono $^ 

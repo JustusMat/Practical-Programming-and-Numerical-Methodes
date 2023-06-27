@@ -201,7 +201,7 @@ public partial class montecarlo
         double var2 = sumsqtwo / N - mean2 * mean2;
         double var_combined = (var1 + var2) / 2;
         double sigma = System.Math.Sqrt(var_combined);
-        double SEM = sigma * V / System.Math.Sqrt(2 * N);
+        double SEM = sigma / System.Math.Sqrt(2 * N);
         
         //var result = (mean1 * V, sigma * V / System.Math.Sqrt(N));
         var result = ((mean1+mean2)/2 *V, SEM*V);

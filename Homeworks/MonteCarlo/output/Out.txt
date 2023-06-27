@@ -1,25 +1,26 @@
 ────────────────────────────────────────────────────────────────────────────────────────
 ────────────────────────────────────────────────────────────────────────────────────────
-Using Npoints = 100000000
+Using Npoints = 10000000
 ────────────────────────────────────────────────────────────────────────────────────────
 Integrating function f(x,y) = sqrt(x^2 + y^2)
 x bounds [-1,1]
 y bounds [-1,1]
 The integral is ~ 3.0608
 ────────────────────────────────────────────────────────────────────────────────────────
-The plain montecarlo parallel integral is = 3.06078038059558
-The plain montecarlo parallel error is = 0.000113949759319858
-The quasi montecarlo parallel integral is = 3.06078285388802
-The quasi montecarlo parallel error is = 0.000322276267589595
+The plain montecarlo parallel integral is = 3.06073729635612
+The plain montecarlo parallel error is = 0.000360331197335445
+The quasi montecarlo parallel integral is = 3.06078264178731
+The quasi montecarlo parallel error is = 0.000254781768424212
 ────────────────────────────────────────────────────────────────────────────────────────
-The StratifiedSampling integral is 3.06053004173016
-The StratifiedSampling parallel integral is 3.06034860696259
+The StratifiedSampling integral is 3.06074599594495 +-0.000120049329050204
 ────────────────────────────────────────────────────────────────────────────────────────
 The difficult integral is supposed to be 1.3932039296856768591842462603255
-The plain montecarlo parallel integral is =1.39669487105378
-The plain montecarlo parallel error is =0.00629504547979775
+The plain montecarlo parallel integral is =1.38782971996728
+The plain montecarlo parallel error is =0.00277653077381502
 ────────────────────────────────────────────────────────────────────────────────────────
-The quasi montecarlo parallel integral is =1.39771719549301
-The quasi montecarlo parallel error is =0.0403506911790036
+The quasi montecarlo parallel integral is =1.40393051559535
+The quasi montecarlo parallel error is =0.008363541829205
+────────────────────────────────────────────────────────────────────────────────────────
+The StratifiedSampling integral is 1.39388469654203 +-0.000464825885043846
 ────────────────────────────────────────────────────────────────────────────────────────
 ────────────────────────────────────────────────────────────────────────────────────────

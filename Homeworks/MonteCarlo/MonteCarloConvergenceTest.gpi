@@ -1,0 +1,17 @@
+set term svg background rgb "white"
+set output "PlainMonteCarloConvergenceTest.svg"
+set tics in
+set key top right
+set yrange [2.8:3.3]
+
+
+set logscale x 10
+set xlabel "N points" font ",20"
+set ylabel "f(N)" font ",20"
+set title "Monte Carlo Convergence \n f(x,y) = sqrt(x^2 + y^2) in [-1,1]x[-1,1]" font ",25"
+
+plot "../data/NpointsPlain.data" u 1:2:3 with yerrorbars pt 7 lc "black" pointsize 0.5 title "Plain MC", \
+     "../data/NpointsQuasi.data" u 1:2:3 with yerrorbars pt 7 lc "red" pointsize 0.5 title "Quasi MC", \
+     "../data/NpointsStratifiedSampling.data" u 1:2:3 with yerrorbars pt 7 lc "blue" pointsize 0.5 title "Strat. Samp. MC"
+      
+ 

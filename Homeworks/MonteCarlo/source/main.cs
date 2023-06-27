@@ -8,7 +8,7 @@
         };
         vector a = new vector(-1, -1);
         vector b = new vector(1, 1);
-        int N = (int)10e7;
+        int N = (int)10e6;
         var mcobject = new montecarlo(cFunc, a, b, N);
         Line();
         Line();
@@ -32,13 +32,24 @@
         System.Console.WriteLine($"The quasi montecarlo parallel integral is = {quasiresult.Item1}");
         System.Console.WriteLine($"The quasi montecarlo parallel error is = {quasiresult.Item2}");
         Line();
-        int nReuse = 0;
-        double meanReuse = 0.0;
-        var StratifiedSamplingResult = mcobject.StratifiedSampling(nReuse,meanReuse);
-        System.Console.WriteLine($"The StratifiedSampling integral is {StratifiedSamplingResult}");
-        StratifiedSamplingResult = mcobject.StratifiedSamplingParallel(nReuse,meanReuse);
-        System.Console.WriteLine($"The StratifiedSampling parallel integral is {StratifiedSamplingResult}");
+        //int nReuse = 0;
+        //double meanReuse = 0.0;
+        //var StratifiedSamplingResult = mcobject.StratifiedSampling(nReuse,meanReuse);
+        //System.Console.WriteLine($"The StratifiedSampling integral is {StratifiedSamplingResult}");
+        //StratifiedSamplingResult = mcobject.StratifiedSamplingParallel(nReuse,meanReuse);
+        System.Func<double[], double> Cfunc = (double[] r) =>
+        {
+            return System.Math.Sqrt(System.Math.Pow(r[0], 2) + System.Math.Pow(r[1], 2));
+        };
+        MISER miserObject = new MISER(32 * 16 * 2, 16 * 2, 0.1, 2.0);
+        double[] xlow = new double[2] { -1.0, -1.0};
+        double[] xup = new double[2] { 1.0, 1.0 };
+        (double StratifiedSamplingResult, double StratifiedSamplingError) =
+            miserObject.Integrate(Cfunc, N, xlow, xup);  
+        System.Console.WriteLine($"The StratifiedSampling integral is {StratifiedSamplingResult} +-{System.Math.Sqrt(StratifiedSamplingError)}");
         Line();
+        
+        //--------------------------------------------------------------------------------------------------------------
         cFunc = (vector r) =>
         {
             double argument = 1.0 - System.Math.Cos(r[0]) * System.Math.Cos(r[1]) * System.Math.Cos(r[2]);
@@ -55,7 +66,20 @@
         result_parallel = mcobject.QuasiMCParallel(); 
         System.Console.WriteLine($"The quasi montecarlo parallel integral is ={result_parallel.Item1}");
         System.Console.WriteLine($"The quasi montecarlo parallel error is ={result_parallel.Item2}");
-        /* For some reason not working??
+        Line();
+        Cfunc = (double[] r) =>
+        {
+            double argument = 1.0 - System.Math.Cos(r[0]) * System.Math.Cos(r[1]) * System.Math.Cos(r[2]);
+            return 1 / (System.Math.Pow(System.Math.PI, 3) * argument);
+
+        };
+        xlow = new double[3] {0,0,0};
+        xup = new double[3] {System.Math.PI,System.Math.PI,System.Math.PI};
+        ( StratifiedSamplingResult, StratifiedSamplingError) =
+            miserObject.Integrate(Cfunc, N, xlow, xup);  
+        System.Console.WriteLine($"The StratifiedSampling integral is {StratifiedSamplingResult} +-{System.Math.Sqrt(StratifiedSamplingError)}");
+        
+        /* For some reason not working?? ===> Actually an overflow due to the Non recursive stratified sampling algorithm :/ 
         StratifiedSamplingResult = mcobject.StratifiedSampling(nReuse,meanReuse);    
         System.Console.WriteLine($"The StratifiedSampling parallel montecarlo integral is ={StratifiedSamplingResult}");
         */

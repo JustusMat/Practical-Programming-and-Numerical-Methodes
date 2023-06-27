@@ -1,0 +1,31 @@
+set term svg background rgb "white"
+set output "MonteCarloErrorScaling.svg"
+set tics in
+set key top right
+
+set logscale x 10
+#set logscale y 
+set xlabel "N points" font ",20"
+set ylabel "Error" font ",20"
+set title "Monte Carlo Error Convergence" font ",25"
+
+dataplain = "../data/NpointsPlain.data"
+dataquasi = "../data/NpointsQuasi.data"
+datastrat = "../data/NpointsStratifiedSampling.data"
+
+fit_functionplain(x,A) = A/sqrt(x)
+fit fit_functionplain(x,A) dataplain using 1:3 via A
+
+fit_functionquasi(x,B) = B/sqrt(x)
+fit fit_functionquasi(x,B) dataquasi using 1:3 via B
+
+fit_functionstrat(x,C) = C/sqrt(x)
+fit fit_functionstrat(x,C) datastrat using 1:3 via C
+
+plot \
+    dataplain u 1:3 with points pt 7 lc "black" pointsize 1.0 title "Plain MC", \
+    fit_functionplain(x,A) with lines lc "black" title sprintf("f(N)= A/sqrt(N), A= %.2f",A), \
+    dataquasi u 1:3 with points pt 7 lc "red" pointsize 1.0 title "Quasi MC", \
+    fit_functionquasi(x,B) with lines lc "red" title sprintf("f(N)= B/sqrt(N), B= %.2f",B), \
+    datastrat u 1:3 with points pt 7 lc "blue" pointsize 1.0 title "Strat. Samp. MC", \
+    fit_functionstrat(x,C) with lines lc "blue" title sprintf("f(N)= C/sqrt(N), C= %.2f",C)
