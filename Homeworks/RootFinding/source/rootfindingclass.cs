@@ -3,7 +3,7 @@ using System.Xml;
 public class rootfindingclass
 {
     public static (vector,int) NewtonsMethod(System.Func<vector, vector> f, vector x, double epsilon = 1e-12, 
-        int maxIterations = 1000, double alpha = 1.0, double beta = 0.5, double lambdamin = 1.0/32.0)
+        int maxIterations = 1000, double alpha = 0.5, double lambdamin = 1.0/32.0)
     {
         int n = x.size;
         vector dx = new vector(n);
@@ -27,9 +27,9 @@ public class rootfindingclass
 
             //backtracking line search
             double lambda = 1.0;
-            while (f(x+lambda*dx).norm() >= (1-beta*lambda)*F.norm() && lambda>lambdamin)
+            while (f(x+lambda*dx).norm() >= (1-alpha*lambda)*F.norm() && lambda>lambdamin)
             {                
-                lambda *= beta; 
+                lambda *= alpha; 
             }
 
             x += lambda * dx;

@@ -4,7 +4,7 @@ SPATH_matlib_matrix = ../source/matlib/matrix/
 
 
 
-default: main.exe matrixlibrary.dll odelibrary.dll rootfindinglib.dll BSHydrogen.exe
+default: main.exe matrixlibrary.dll odelibrary.dll rootfindinglib.dll BSHydrogen.exe InvestigateConvergence.exe
 
 
 #Executables
@@ -14,6 +14,11 @@ main.exe: $(addprefix $(SPATH), main.cs) matrixlibrary.dll rootfindinglib.dll
 		$(addprefix -reference:, $(filter %.dll, $^))
 
 BSHydrogen.exe: $(addprefix $(SPATH), BSHydrogen.cs) matrixlibrary.dll rootfindinglib.dll odelibrary.dll
+	mcs -target:exe -out:$@ \
+		$(filter %.cs, $^) \
+		$(addprefix -reference:, $(filter %.dll, $^))
+
+InvestigateConvergence.exe: $(addprefix $(SPATH), InvestigateConvergence.cs) matrixlibrary.dll rootfindinglib.dll odelibrary.dll
 	mcs -target:exe -out:$@ \
 		$(filter %.cs, $^) \
 		$(addprefix -reference:, $(filter %.dll, $^))
