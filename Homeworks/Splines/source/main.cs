@@ -16,7 +16,7 @@
         //Objects for interpolation
         linearinterpolation liObject = new linearinterpolation(xinterp,yinterp);
         quadraticinterpolation qiObject = new quadraticinterpolation(xinterp,yinterp);
-        
+        cubicinterpolation ciObject = new cubicinterpolation(xinterp, yinterp);
         
         
         
@@ -36,7 +36,7 @@
         {
             for (int i = 0; i < NPlotPoints; i++)
             {
-                writer.WriteLine($"{xplot[i]} {yplot[i]} {liObject.Interpolate(xplot[i])} {qiObject.Interpolate(xplot[i])}");
+                writer.WriteLine($"{xplot[i]} {yplot[i]} {liObject.Interpolate(xplot[i])} {qiObject.Interpolate(xplot[i])} {ciObject.Interpolate(xplot[i])}");
             }
         }
         
@@ -44,7 +44,7 @@
         {
             for (int i = 1; i < NPlotPoints; i++)
             {
-                writer.WriteLine($"{xplot[i]} {SincAntiDerivative(xplot[i]) +0.5} {liObject.Integrate(xplot[i])} {qiObject.Integrate(xplot[i])}");
+                writer.WriteLine($"{xplot[i]} {SincAntiDerivative(xplot[i]) +0.5} {liObject.Integrate(xplot[i])} {qiObject.Integrate(xplot[i])} {ciObject.Integrate(xplot[i])}");
             }
         }
 
@@ -52,7 +52,7 @@
         {
             for (int i = 0; i < NPlotPoints; i++)
             {
-                writer.WriteLine($"{xplot[i]} {DerivativeSinc(xplot[i])} {qiObject.Derivative(xplot[i])}");
+                writer.WriteLine($"{xplot[i]} {DerivativeSinc(xplot[i])} {qiObject.Derivative(xplot[i])} {ciObject.Derivative(xplot[i])}");
             }
         }
         

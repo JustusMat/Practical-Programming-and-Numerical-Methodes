@@ -15,19 +15,19 @@ directory using the source code in the source directory. This is followed by the
 data directory and the presentation of the solutions in the output directory.
 ## Status of homeworks
 
-| #   |                    Homework                    |  A  | B |  C  |  Σ  |  
-|:----|:----------------------------------------------:|:---:|:-:|:---:|:---:|
-|1| [/LinearEquations](/Homeworks/LinearEquations) |6| 3 |1|10|
-|2| [/Eigenvalues](/Homeworks/Eigenvalues) |6| 3 |-|9|
-|3| [/LeastSquares](/Homeworks/LeastSquares) |6| 3 |1|10|
-|4| [/Splines](/Homeworks/Splines) |6| 3 |-|9|
-|5| [/ODE](/Homeworks/ODE) |6| 3 |1|10|
-|6| [/AdaptiveIntegration](/Homeworks/AdaptiveIntegration) |6| 3 |1|10|
-|7| [/MonteCarlo](/Homeworks/MonteCarlo) |6| 3 |1|10|
-|8| [/RootFinding](/Homeworks/RootFinding) |6| 3 |-|9|
-|9| [/Minimisation](/Homeworks/Minimisation) |6| 3 |-|9|
-|10| [/NeuralNetworks](/Homeworks/NeuralNetworks) |6| 3 |-|9|
-|| ||   ||Total points: 95|
+| #   |                    Homework                    |  A  | B | C |        Σ         |  
+|:----|:----------------------------------------------:|:---:|:-:|:-:|:----------------:|
+|1| [/LinearEquations](/Homeworks/LinearEquations) |6| 3 | 1 |        10        |
+|2| [/Eigenvalues](/Homeworks/Eigenvalues) |6| 3 | - |        9         |
+|3| [/LeastSquares](/Homeworks/LeastSquares) |6| 3 | 1 |        10        |
+|4| [/Splines](/Homeworks/Splines) |6| 3 | 1 |        10        |
+|5| [/ODE](/Homeworks/ODE) |6| 3 | 1 |        10        |
+|6| [/AdaptiveIntegration](/Homeworks/AdaptiveIntegration) |6| 3 | 1 |        10        |
+|7| [/MonteCarlo](/Homeworks/MonteCarlo) |6| 3 | 1 |        10        |
+|8| [/RootFinding](/Homeworks/RootFinding) |6| 3 | - |        9         |
+|9| [/Minimisation](/Homeworks/Minimisation) |6| 3 | - |        9         |
+|10| [/NeuralNetworks](/Homeworks/NeuralNetworks) |6| 3 | - |        9         |
+|| ||   |   | Total points: 96 |
 
 
 
