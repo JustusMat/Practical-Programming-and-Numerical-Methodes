@@ -25,9 +25,9 @@ data directory and the presentation of the solutions in the output directory.
 |6| [/AdaptiveIntegration](/Homeworks/AdaptiveIntegration) |6| 3 | 1 |        10        |
 |7| [/MonteCarlo](/Homeworks/MonteCarlo) |6| 3 | 1 |        10        |
 |8| [/RootFinding](/Homeworks/RootFinding) |6| 3 | - |        9         |
-|9| [/Minimisation](/Homeworks/Minimisation) |6| 3 | - |        9         |
+|9| [/Minimisation](/Homeworks/Minimisation) |6| 3 | 1 |        10        |
 |10| [/NeuralNetworks](/Homeworks/NeuralNetworks) |6| 3 | - |        9         |
-|| ||   |   | Total points: 96 |
+|| ||   |   | Total points: 97 |
 
 
 

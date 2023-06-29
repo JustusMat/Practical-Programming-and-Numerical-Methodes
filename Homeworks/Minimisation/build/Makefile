@@ -20,7 +20,7 @@ higgsminimisation.exe: $(addprefix $(SPATH), HiggsMinimisation.cs) matrixlibrary
 matrixlibrary.dll: $(addprefix $(SPATH_matlib), matrix.cs vector.cs additionalmatrixmethods.cs)
 	mcs -target:library -out:$@ $^
 
-minimisationlib.dll: $(addprefix $(SPATH), minimisationclass.cs) matrixlibrary.dll
+minimisationlib.dll: $(addprefix $(SPATH), minimisationclass.cs SimplexMinimisation.cs) matrixlibrary.dll
 	mcs -target:library -out:$@ \
 		$(filter %.cs, $^) \
 		$(addprefix -reference:, $(filter %.dll, $^)) 

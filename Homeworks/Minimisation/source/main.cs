@@ -13,6 +13,12 @@ public class Program
         System.Console.WriteLine($"The solution is converged in {RosenBrockMinObject.iteration} iterations at");
         xsolution.print();
         Line();
+        var RosenBrockSimplexObject = new Simplex(RosenBrock, x0);
+        (vector simplexSolution, int simplexIterations) = RosenBrockSimplexObject.Downhill();
+        System.Console.WriteLine($"The solution with simplex is converged in {simplexIterations} iterations at");
+        simplexSolution.print();
+        Line();
+        Line();
         System.Console.WriteLine("Minimising the HimmelBlau function");
         System.Console.WriteLine("Initial guess:");
         x0.print();
@@ -20,6 +26,12 @@ public class Program
         xsolution = HimmelBlauMinObject.MinimiseQN(maxIteration:(int)1e4);
         System.Console.WriteLine($"The solution is converged in {HimmelBlauMinObject.iteration} iterations at");
         xsolution.print();
+        Line();
+        var himmelBlaueMinObjectSimplex = new Simplex(HimmelBlau, x0);
+        (simplexSolution, simplexIterations) = himmelBlaueMinObjectSimplex.Downhill();
+        System.Console.WriteLine($"The solution with simplex is converged in {simplexIterations} iterations at");
+        simplexSolution.print();
+        Line();
         Line();
     }
 

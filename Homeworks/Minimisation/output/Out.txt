@@ -6,9 +6,17 @@ Initial guess:
 The solution is converged in 5389 iterations at
          1          1 
 ──────────────────────────────────────────────────
+The solution with simplex is converged in 167 iterations at
+         1          1 
+──────────────────────────────────────────────────
+──────────────────────────────────────────────────
 Minimising the HimmelBlau function
 Initial guess:
         10         10 
 The solution is converged in 12 iterations at
      -3.78      -3.28 
+──────────────────────────────────────────────────
+The solution with simplex is converged in 62 iterations at
+     -2.81       3.13 
+──────────────────────────────────────────────────
 ──────────────────────────────────────────────────

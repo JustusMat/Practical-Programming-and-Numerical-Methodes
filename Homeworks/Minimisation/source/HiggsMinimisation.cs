@@ -28,16 +28,29 @@ public class HiggsMinimisation
                 error.Add(double.Parse(values[2]));
             }
         }
+        
         vector x0 = new vector(10.0, 12.0, 15.0); 
         var HiggsMinimisationObject = new minimisationclass(chi2min, x0);
         vector xsolution = HiggsMinimisationObject.MinimiseQN(maxIteration:(int)10e4);
-        System.Console.WriteLine($"{xsolution[0]} {xsolution[1]} {xsolution[2]}");
         
+        System.Console.WriteLine($"{xsolution[0]} {xsolution[1]} {xsolution[2]}");
         System.Console.Error.WriteLine($"The minimisation succeded in {HiggsMinimisationObject.iteration} iterations at");
         System.Console.Error.WriteLine($"A: {xsolution[0]}");
         System.Console.Error.WriteLine($"m: {xsolution[1]}");
         System.Console.Error.WriteLine($"Gamma: {xsolution[2]}");
-        
+
+
+
+        var SimplexHiggsMinimisationObject = new Simplex(chi2min, x0);
+        (vector SimplexSolution, int iter) = SimplexHiggsMinimisationObject.Downhill();
+        using (System.IO.StreamWriter writer = new System.IO.StreamWriter("./fitresultssimplex.data"))
+        {
+            writer.WriteLine($"{SimplexSolution[0]} {SimplexSolution[1]} {SimplexSolution[2]}");
+            System.Console.Error.WriteLine($"The simplex minimisation succeded in {iter} iterations at");
+            System.Console.Error.WriteLine($"A: {SimplexSolution[0]}");
+            System.Console.Error.WriteLine($"m: {SimplexSolution[1]}");
+            System.Console.Error.WriteLine($"Gamma: {SimplexSolution[2]}");
+        }
     }
 
     static System.Collections.Generic.List<double> energy = new System.Collections.Generic.List<double>();

@@ -1,7 +1,7 @@
 //Implementation of the Recursive Stratified Sampling Code MISER
 //Credits go to: https://www.maxwellrules.com/math/montecarlo_integration.html
 //and the provided Python code
-//Notice that the in the code above there must be included the volume term as otherwise ranges like [-1,1] only will be counted as [0,1]
+//Notice that in the code above there must be included the volume term as otherwise ranges like [-1,1] only will be counted as [0,1]
 
 
 using System.Linq;

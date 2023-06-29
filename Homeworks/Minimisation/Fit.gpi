@@ -17,7 +17,16 @@ Gamma = word(fit_params,3)
 
 BreitWigner(x) = A/((x-m)*(x-m) + Gamma*Gamma/4)
 
+#Extract the parameters from the string
+fit_params = system("awk '{print $1, $2, $3}' '../data/fitresultssimplex.data'")
+As = word(fit_params,1)
+ms = word(fit_params,2)
+Gammas = word(fit_params,3)
+BreitWignerSimplex(x) = As/((x-ms)*(x-m) + Gammas*Gammas/4)
+
+
 plot "../data/higgs.dat" u 1:2:3 w errorbars title "Data" pt 7 lc rgb "black", \
-     BreitWigner(x) title "Fit" with lines lt rgb "red"
+     BreitWigner(x) title "Fit" with lines lt  rgb "red" lw 2, \
+     BreitWignerSimplex(x) title "Simplex fit" with lines dashtype 2 lt rgb "blue" lw 2
     
      
