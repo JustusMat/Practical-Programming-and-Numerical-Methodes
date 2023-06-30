@@ -1,12 +1,12 @@
 public partial class SimpleNeuralNetwork
 {
-    private int nHiddenNodes;
+    protected int nHiddenNodes;
     private System.Func<double, double> activationFunction;
     private System.Func<double, double> activationFunctionDerivative;
     private System.Func<double, double> activationFunctionSecondDerivative;
     private System.Func<double, double> activationFunctionAntiDerivative;
-    
-    private vector parameters;
+
+    protected vector parameters;
 
     public SimpleNeuralNetwork(int n, string activation="Sigmoid")
     {
@@ -36,7 +36,7 @@ public partial class SimpleNeuralNetwork
         InitiliaseParameters();
     }
 
-    private vector HiddenWeights
+    protected vector HiddenWeights
     {
         get { return parameters.Slice(0, nHiddenNodes);}
         set
@@ -48,13 +48,13 @@ public partial class SimpleNeuralNetwork
             parameters.SetRange(0, nHiddenNodes, value);
         }    }
 
-    private vector HiddenScales
+    protected vector HiddenScales
     {
         get { return parameters.Slice(nHiddenNodes, 2 * nHiddenNodes); }
         set{parameters.SetRange(nHiddenNodes,2*nHiddenNodes,value);}
     }
 
-    private vector HiddenShifts
+    protected vector HiddenShifts
     {
         get { return parameters.Slice(2 * nHiddenNodes, 3 * nHiddenNodes); }
         set{parameters.SetRange(2*nHiddenNodes,3*nHiddenNodes,value);}
@@ -66,8 +66,16 @@ public partial class SimpleNeuralNetwork
         System.Random random = new System.Random();
         for (int i = 0; i < 3*nHiddenNodes; i++)
         {
-            parameters[i] = random.NextDouble() - 0.5;
+            if (i < nHiddenNodes)
+            {
+                parameters[i] = 2*random.NextDouble() - 1;
+            }
+            else
+            {
+                parameters[i] = 1.0;
+            }
         }
+        
     }
 
     public double Response(double x)
@@ -101,11 +109,48 @@ public partial class SimpleNeuralNetwork
     
     public void Train(vector input, vector target)
     {
-        var min = new minimisationclass(p => CostFunction(p, input,target), parameters);
-        parameters = min.MinimiseQN();
+        var min = new Simplex(p => CostFunction(p, input,target), parameters);
+        (vector parameterVector, int iterations) = min.Downhill();
+        parameters = parameterVector;
+        System.Console.Error.WriteLine($"Simplex downhill method terminated at {iterations}");
         HiddenWeights = parameters.Slice(0, nHiddenNodes);
         HiddenScales = parameters.Slice(nHiddenNodes, 2*nHiddenNodes);
         HiddenShifts = parameters.Slice(2*nHiddenNodes,3*nHiddenNodes);
     }
+    
+    public double CostFunctionDifferentialEquation2(vector p, System.Func<double, double, double, double, double> Phi, vector input)
+    {
+        HiddenWeights = p.Slice(0, nHiddenNodes);
+        HiddenScales = p.Slice(nHiddenNodes, 2 * nHiddenNodes);
+        HiddenShifts = p.Slice(2 * nHiddenNodes, 3 * nHiddenNodes);
 
+        double a = input[0];
+        double b = input[1];
+        double c = input[2];
+        double y_c = input[2];
+        double yp_c = input[2];
+        
+        double alpha = 0.5;
+        double beta = 0.25;
+        double sum = 0.0;
+        
+        System.Func<double, double> ypp = x => ResponseSecondDerivative(x);
+        System.Func<double, double> yp = x => ResponseDerivative(x);
+        System.Func<double, double> y = x => Response(x);
+        
+        sum += alpha * System.Math.Pow(y(c) - y_c, 2);
+        sum += beta * System.Math.Pow(yp(c) - yp_c, 2);
+
+        int numIntervals = 100;
+        double dx = (b - a) / numIntervals;
+        double integral = 0.0;
+        for (int i = 0; i < numIntervals; i++)
+        {
+            double x = a + i * dx;
+            integral += System.Math.Pow(Phi(ypp(x), yp(x), y(x), x), 2);
+        }
+
+        sum += integral * dx;
+        return sum;
+    }
 }

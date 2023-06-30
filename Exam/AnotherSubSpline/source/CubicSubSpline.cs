@@ -99,9 +99,6 @@ public class CubicSubSpline
         return (a, b, c);
     }
     
-    
-    
-    
     public double Interpolate(double z)
     {
         int i = Binsearch(x, z);

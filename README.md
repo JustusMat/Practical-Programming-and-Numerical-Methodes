@@ -26,8 +26,8 @@ data directory and the presentation of the solutions in the output directory.
 |7| [/MonteCarlo](/Homeworks/MonteCarlo) |6| 3 | 1 |        10        |
 |8| [/RootFinding](/Homeworks/RootFinding) |6| 3 | - |        9         |
 |9| [/Minimisation](/Homeworks/Minimisation) |6| 3 | 1 |        10        |
-|10| [/NeuralNetworks](/Homeworks/NeuralNetworks) |6| 3 | - |        9         |
-|| ||   |   | Total points: 97 |
+|10| [/NeuralNetworks](/Homeworks/NeuralNetworks) |6| 3 | 1 |        10        |
+|| ||   |   | Total points: 98 |
 
 
 
@@ -38,7 +38,7 @@ data directory and the presentation of the solutions in the output directory.
 ![Progress](https://progress-bar.dev/90/?title=/Eigenvalues) [/Eigenvalues](/Homeworks/Eigenvalues)<br />
 ![Progress](https://progress-bar.dev/100/?title=/LeastSquares) [/LeastSquares](/Homeworks/LeastSquares)<br />
 #### Week VII
-![Progress](https://progress-bar.dev/90/?title=/Splines) [/Splines](/Homeworks/Splines)<br />
+![Progress](https://progress-bar.dev/100/?title=/Splines) [/Splines](/Homeworks/Splines)<br />
 #### Week VIII
 ![Progress](https://progress-bar.dev/100/?title=/ODE) [/ODE](/Homeworks/ODE)<br />
 #### Week IX
@@ -47,9 +47,9 @@ data directory and the presentation of the solutions in the output directory.
 #### Week X
 ![Progress](https://progress-bar.dev/90/?title=/RootFinding) [/RootFinding](/Homeworks/RootFinding)<br />
 #### Week XI
-![Progress](https://progress-bar.dev/90/?title=/Minimisation) [/Minimisation](/Homeworks/Minimisation)<br />
+![Progress](https://progress-bar.dev/100/?title=/Minimisation) [/Minimisation](/Homeworks/Minimisation)<br />
 #### Week XII
-![Progress](https://progress-bar.dev/90/?title=/NeuralNetworks) [/NeuralNetworks](/Homeworks/NeuralNetworks)<br />
+![Progress](https://progress-bar.dev/100/?title=/NeuralNetworks) [/NeuralNetworks](/Homeworks/NeuralNetworks)<br />
 
 ## Status of exercises
 #### Week I

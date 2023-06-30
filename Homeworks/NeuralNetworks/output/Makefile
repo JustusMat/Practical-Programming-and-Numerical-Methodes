@@ -4,7 +4,7 @@ DPATH = ../data/
 OPATH = ../output/
 MPATH = ../
 
-default: Out.txt gData.svg dgdxData.svg d2gdx2Data.svg integralgData.svg
+default: Out.txt gData.svg dgdxData.svg d2gdx2Data.svg integralgData.svg diffeqPlot.svg
 	
 Out.txt: $(addprefix $(BPATH), main.exe)
 	mono $^ > $@ 
@@ -20,3 +20,6 @@ d2gdx2Data.svg: $(addprefix $(MPATH), d2gdx2DataPlot.gpi) $(addprefix $(DPATH), 
 
 integralgData.svg: $(addprefix $(MPATH), integralgDataPlot.gpi) $(addprefix $(DPATH), gDataAntiDerivative.data)
 	gnuplot $<
+	
+diffeqPlot.svg: $(addprefix $(MPATH), diffeqPlot.gpi) $(addprefix $(DPATH), DifferentialEquationSolution.data)
+	gnuplot $< 

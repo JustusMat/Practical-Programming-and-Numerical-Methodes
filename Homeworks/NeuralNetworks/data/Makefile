@@ -1,5 +1,6 @@
 BPATH = ../build/
 OPATH = ../output/
 
-default:
-	@echo Nothing to do..
+default: DifferentialEquationSolution.data
+DifferentialEquationSolution.data: $(addprefix $(BPATH), SolveDiffEq.exe)
+	mono $^

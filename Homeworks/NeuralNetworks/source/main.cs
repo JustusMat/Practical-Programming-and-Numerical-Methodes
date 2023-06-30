@@ -2,7 +2,7 @@
 {
     public static void Main(string[] args)
     {
-        var xtrain = Linspace(-1.0, 1.0, 10);
+        var xtrain = Linspace(-1.0, 1.0, 12);
         var ytrain = new double[xtrain.Length];
         for (int i = 0; i < xtrain.Length; i++)
         {
@@ -10,7 +10,7 @@
         }
         
         //Network stuff
-        int nHiddenNodes = 10;
+        int nHiddenNodes = 6;
         var myNetwork = new SimpleNeuralNetwork(nHiddenNodes, activation:"Gaussian Wavelet");
         Line();
         System.Console.WriteLine($"Training a network with {nHiddenNodes} hidden neurons");
@@ -58,7 +58,7 @@
             for (int i = 0; i < X.Length; i++)
             {
                 //To do... Need to implement the complex analytical integral of g(x)
-                writer.WriteLine($"{X[i]} {G(X[i])} {myNetwork.ResponseAntiDerivative(X[i])+0.5}");
+                writer.WriteLine($"{X[i]} {G(X[i])} {-myNetwork.ResponseAntiDerivative(X[i])}");
             }
         }
     }
@@ -84,7 +84,7 @@
 
     public static double G(double x)
     {
-        return new System.Random().NextDouble()*0.01;
+        return integrator.CCIntegrate(g,-1,x) - integrator.CCIntegrate(g,-1,10000);
     }
     
     
